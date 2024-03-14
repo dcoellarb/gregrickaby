@@ -1,8 +1,8 @@
 ## Code review summary
 
-1. One of the first things that caught my attention was the lack of loading.tsx components, but after further review i see that the developer does a great use of Static Server Rendering so since html is mostly build at build time, no need for loading is supported.
+1. Most the code seams very well done, structure and documented, is really a well done app, with great usage of next js features, show a lot of Knowledge on SEO optimization and web development.
 
-2. Most the code seams very well done, structure and documented, is really a well done app
+2. One of the first things that caught my attention was the lack of loading.tsx components, but after further review i see that the developer does a great use of Static Server Rendering so since html is mostly build at build time, no need for loading is supported.
 
 3. My improvements findings have been mostly around:
 
