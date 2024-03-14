@@ -5,8 +5,11 @@
 2. Most the code seams very well done, structure and documented, is really a well done app
 
 3. My improvements findings have been mostly around:
+
    i. Better error handling
+
    ii. Validating environment variables
+
    iii. Sanitation of dynamic html
 
 4. Only one bug found: a wrong double negation on /Components/Comments.tsx line 13
