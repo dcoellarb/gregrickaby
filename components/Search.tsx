@@ -97,6 +97,7 @@ export default function Search() {
                   href={result.url.replace('https://blog.', 'https://')}
                   onClick={resetSearch}
                 >
+                  {/* REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar */}
                   <span
                     className="m-0 p-0"
                     dangerouslySetInnerHTML={{__html: result.title}}

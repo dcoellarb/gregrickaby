@@ -15,6 +15,8 @@ export default function MorePosts({endCursor}: Readonly<{endCursor: string}>) {
   })
 
   // Fetch handler.
+  // REVIEW: adding a try catch when calling the apis is a good practice,
+  // also have a loading and error state in this component
   async function fetchPosts() {
     // Set the cursor.
     const cursor = posts.pageInfo.endCursor || endCursor

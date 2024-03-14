@@ -39,6 +39,7 @@ export async function GET(request: NextRequest) {
   const slug = request.nextUrl.searchParams.get('slug')
 
   // Validate the secret.
+  // REVIEW: validate all env variables exists before using them and return an specific error for them
   if (secret !== process.env.NEXTJS_REVALIDATION_SECRET) {
     return new Response(
       JSON.stringify({revalidated: false, message: 'Invalid secret'}),

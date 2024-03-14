@@ -58,6 +58,7 @@ export default async function TagArchive({
   params
 }: Readonly<{params: {slug: string}}>) {
   // Fetch posts from WordPress.
+  // REVIEW: Optional - maybe we can have a more specific error handler for Categories
   const posts = await getTagBySlug(params.slug, 12)
 
   // No posts? Throw a 404.

@@ -9,6 +9,7 @@ export default function Comments({post}: Readonly<{post: Post}>) {
     <>
       <section className="border-t-2 border-zinc-500 py-4">
         <h3 className="text-3xl font-bold">Comments</h3>
+        {/* REVIEW: BUG: this double negation is wrong */}
         {!!post?.comments?.edges?.length && (
           <p className="italic">No comments yet.</p>
         )}
@@ -25,6 +26,7 @@ export default function Comments({post}: Readonly<{post: Post}>) {
                 />
               )}
               <div className="flex flex-col gap-2">
+                {/* REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar */}
                 <h4
                   className="m-0 p-0 leading-none"
                   dangerouslySetInnerHTML={{
@@ -34,6 +36,7 @@ export default function Comments({post}: Readonly<{post: Post}>) {
                 <time className="italic">{comment.node.date}</time>
               </div>
             </header>
+            {/* REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar */}
             <div dangerouslySetInnerHTML={{__html: comment.node.content}} />
           </article>
         ))}

@@ -43,6 +43,7 @@ export async function generateMetadata({
  */
 export default async function BlogArchive() {
   // Fetch posts from WordPress.
+  // REVIEW: Optional - maybe we can have a more specific error handler for Categories
   const posts = await getPosts(12)
 
   // No posts? Throw a 404.

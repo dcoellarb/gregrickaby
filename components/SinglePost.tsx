@@ -1,17 +1,18 @@
 import Blocks from '@/components/Blocks'
 import Comments from '@/components/Comments'
 import FeaturedImage from '@/components/FeaturedImage'
-import {formatDate} from '@/lib/functions'
-import type {Post} from '@/lib/types'
+import { formatDate } from '@/lib/functions'
+import type { Post } from '@/lib/types'
 import Link from 'next/link'
 
 /**
  * Single post component.
  */
-export default function SinglePost({post}: Readonly<{post: Post}>) {
+export default function SinglePost({post}: Readonly<{post: Post}>) {\
   return (
     <article>
       <header>
+        {/* REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar */}
         <h1
           className="m-0 p-0 leading-none"
           dangerouslySetInnerHTML={{__html: post.title}}

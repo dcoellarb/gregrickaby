@@ -62,6 +62,7 @@ export default async function Page({
   params
 }: Readonly<{params: {slug: string}}>) {
   // Fetch a page from WordPress.
+  // REVIEW: Optional - maybe we can have a more specific error handler for Pages
   const page = await getPageBySlug(params.slug)
 
   // No page? Throw a 404.

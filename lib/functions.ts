@@ -18,6 +18,7 @@ export async function fetchGraphQL<T = any>(
     }
 
     // Get the refresh token.
+    // REVIEW: validate all env variables exists before using them and return an specific error for them
     const refreshToken = process.env.NEXTJS_AUTH_REFRESH_TOKEN
 
     // Prepare headers.

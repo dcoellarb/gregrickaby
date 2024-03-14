@@ -60,6 +60,7 @@ export default async function CategoryArchive({
   params: {slug: string}
 }>) {
   // Fetch posts from WordPress.
+  // REVIEW: Optional - maybe we can have a more specific error handler for Categories
   const posts = await getCategoryBySlug(params.slug, 12)
 
   // No posts? Throw a 404.

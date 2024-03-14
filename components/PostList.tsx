@@ -26,6 +26,7 @@ export default function PostList({posts}: Readonly<{posts: AllPosts}>) {
               className="no-underline hover:underline"
               href={`/blog/${node.slug}`}
             >
+              {/* REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar */}
               <h2
                 className="mt-1 text-xl font-bold leading-tight"
                 dangerouslySetInnerHTML={{__html: node.title}}

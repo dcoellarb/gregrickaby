@@ -14,6 +14,7 @@ export const revalidate = 43200 // 12 hours
  *
  * @see https://nextjs.org/docs/app/api-reference/file-conventions/route
  */
+// REVIEW: Optional - this should go under api folder since is a route handler but is a special one so might be ok here too
 export async function GET() {
   try {
     // Fetch all blog posts.

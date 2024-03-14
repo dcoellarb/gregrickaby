@@ -12,6 +12,7 @@ export default function SinglePage({page}: Readonly<{page: Page}>) {
         image={page.featuredImage}
         hidden={page.hideFeaturedImage.hideFeaturedImage}
       />
+      {/* REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar */}
       <h1 dangerouslySetInnerHTML={{__html: page.title}} />
       <Blocks content={page.content} />
     </article>

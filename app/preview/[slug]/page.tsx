@@ -60,6 +60,7 @@ export default async function Preview({
   const secret = searchParams.secret
 
   // No secret? Bail.
+  // REVIEW: validate all env variables exists before using them and return an specific error for them
   if (!secret || secret !== process.env.NEXTJS_PREVIEW_SECRET) {
     return (
       <div className="container mx-auto text-center">
@@ -74,6 +75,7 @@ export default async function Preview({
   }
 
   // Attempt to get the preview.
+  // REVIEW: Optional - maybe we can have a more specific error handler for Previews
   const post = await getPreview(params.slug)
 
   // No preview available? Bail.
@@ -95,6 +97,7 @@ export default async function Preview({
   return (
     <article>
       <header>
+        {/* REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar */}
         <h1
           className="m-0 p-0 leading-none"
           dangerouslySetInnerHTML={{__html: post.title}}

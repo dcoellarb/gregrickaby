@@ -19,6 +19,7 @@ export default function JsonLD() {
   // Convert to JSON string and format.
   const jsonLD = JSON.stringify(schema, null, 2)
 
+  // REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar
   return (
     <script
       type="application/ld+json"

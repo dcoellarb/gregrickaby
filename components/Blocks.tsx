@@ -32,6 +32,7 @@ export default function Blocks({content}: Readonly<{content: string}>) {
       return
     }
 
+    // REVIEW: is a good practice to add try catch in these cases
     // Import the libraries on demand.
     const Masonry = (await import('masonry-layout')).default
     const Fancybox = (await import('@fancyapps/ui')).Fancybox
@@ -89,6 +90,7 @@ export default function Blocks({content}: Readonly<{content: string}>) {
     galleryInit()
   }, [content])
 
+  // REVIEW: any dynamic injected html should be sanitized with DOMPurify or similar */
   return (
     <div
       ref={contentRef}

@@ -54,6 +54,7 @@ export default async function Post({
   params
 }: Readonly<{params: {slug: string}}>) {
   // Fetch a single post from WordPress.
+  // REVIEW: Optional - maybe we can have a more specific error handler for Blogs
   const post = await getPostBySlug(params.slug)
 
   // No post? Throw a 404.
