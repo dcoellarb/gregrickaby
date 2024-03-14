@@ -1,6 +1,6 @@
 ## Code review summary
 
-For review this code i have place // REVIEW: ... and {/\* REVIEW:... comments across the application, should be simple to search for "REVIEW:" to find them all.
+For review this code i have placed // REVIEW: ... and {/\* REVIEW:... comments across the application, should be simple to search for "REVIEW:" to find them all.
 
 Now here is a summary of my findings:
 
